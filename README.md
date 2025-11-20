@@ -1,5 +1,7 @@
 # ZenDesk Tools
 
+this tool allows to create a new ticket.
+
 ## create .venv
 
 ```
@@ -14,7 +16,8 @@ pip install -r requirements.txt
 zip -r ../zendesk_tool.zip . -x "*.git*" -x "*__pycache__*" -x "*.venv/lib/python*/site-packages/*"
 ```
 
-## upload the Data Lake
+## upload the Data Lake of GenAI Builder
 
-## create a Tools
+## create a Tool in Tools of GenAI Builder
 
+### in Test tab, then make a POST call to /activities/new_ticket

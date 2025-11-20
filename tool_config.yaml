@@ -9,8 +9,8 @@ build:
     watched_files:
     - requirements.txt
     - tool_config.yaml
-    - tool_requests.py
+    - tool.py
 run:
-  tool_file: tool_requests.py
-  init_tool_file: tool_requests.py
+  tool_file: tool.py
+  init_tool_file: tool.py
   init_tool_function: init_tool
