@@ -1,4 +1,4 @@
-ZENDESK_URL=https://enterprisedb-61235.zendesk.com/api/v2
-ZENDESK_EMAIL=your_name@enterprisedb.com
+ZENDESK_URL=https://your-subdomain.zendesk.com/api/v2
+ZENDESK_EMAIL=your_email@company.com
 ZENDESK_PASSWORD= 
 ZENDESK_TOKEN=ZWxxxxxxxxxxxxxxxxxxxx
