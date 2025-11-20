@@ -1,4 +1,4 @@
-# ZenDesk Tools
+# ZenDesk Tools for GenAI Builder
 
 this tool allows to create a new ticket.
 
