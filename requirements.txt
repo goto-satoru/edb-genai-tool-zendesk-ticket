@@ -1,0 +1,4 @@
+griptape>=1.2.1
+zenpy>=2.0.50
+python-dotenv
+schema
