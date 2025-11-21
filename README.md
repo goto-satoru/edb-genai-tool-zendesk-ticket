@@ -1,4 +1,15 @@
+
 # EDB PGAI GenAI Builder sample Tool for ZenDesk ticketing
+
+## ⚠️ Disclaimer
+
+This tool is provided as **sample code for demonstration and educational purposes only**. It is not an official EnterpriseDB product and is provided "as-is" without any warranties or guarantees.
+
+**Important Notes**:
+- Use this tool at your own risk
+- Test thoroughly in a development environment before using in production
+- The authors and EnterpriseDB are not responsible for any issues, data loss, or damages that may occur from using this tool
+- Always follow your organization's security and compliance policies when handling API credentials
 
 A Griptape-based tool for creating and managing ZenDesk customer support tickets programmatically. This tool provides a simple Python interface to interact with the ZenDesk API, enabling automated ticket creation through the Griptape framework.
 
@@ -265,15 +276,6 @@ See `requirements.txt` for the complete list.
 ```
 
 
-## ⚠️ Disclaimer
-
-This tool is provided as **sample code for demonstration and educational purposes only**. It is not an official EnterpriseDB product and is provided "as-is" without any warranties or guarantees.
-
-**Important Notes**:
-- Use this tool at your own risk
-- Test thoroughly in a development environment before using in production
-- The authors and EnterpriseDB are not responsible for any issues, data loss, or damages that may occur from using this tool
-- Always follow your organization's security and compliance policies when handling API credentials
 
 ## 👥 Authors
 
