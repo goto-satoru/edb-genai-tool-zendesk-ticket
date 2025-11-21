@@ -44,9 +44,9 @@ A Griptape-based tool for creating and managing ZenDesk customer support tickets
    
    Edit `.env` with your ZenDesk credentials:
    ```
-   ZenDesk_URL=https://your-subdomain.zendesk.com/api/v2
-   ZenDesk_EMAIL=your_email@company.com
-   ZenDesk_TOKEN=your_api_token_here
+   ZENDESK_URL=https://your-subdomain.zendesk.com/api/v2
+   ZENDESK_EMAIL=your_email@company.com
+   ZENDESK_TOKEN=your_api_token_here
    ```
 
 ## 🔑 Getting ZenDesk API Credentials
@@ -165,7 +165,7 @@ params = {
         "description": "Queries are running slower than expected on production database."
     }
 }
-result = ZenDesk_tool.new_ticket(params)
+result = zendesk_tool.new_ticket(params)
 ```
 
 ## 🔧 Deployment to GenAI Builder
@@ -175,12 +175,12 @@ result = ZenDesk_tool.new_ticket(params)
 Create a zip file for deployment:
 
 ```bash
-zip -r ../ZenDesk_tool.zip . -x "*.git*" -x "*__pycache__*" -x "*.venv/lib/python*/site-packages/*"
+zip -r ../zendesk_tool.zip . -x "*.git*" -x "*__pycache__*" -x "*.venv/lib/python*/site-packages/*"
 ```
 
 ### Upload to GenAI Builder
 
-1. **Upload to Data Lake**: Upload the `ZenDesk_tool.zip` file to the Data Lake of GenAI Builder
+1. **Upload to Data Lake**: Upload the `zendesk_tool.zip` file to the Data Lake of GenAI Builder
 2. **Create a Tool**: In the Tools section of GenAI Builder, create a new tool
 3. **Configure the Tool**: Link the uploaded zip file to your new tool
 
@@ -220,12 +220,12 @@ Testing tool.py via init_tool()
 ======================================================================
 
 ✓ Environment variables loaded
-  ZenDesk_URL: https://your-subdomain.ZenDesk.com
-  ZenDesk_EMAIL: your_email@company.com
-  ZenDesk_TOKEN: ********************
+  ZENDESK_URL: https://your-subdomain.zendesk.com
+  ZENDESK_EMAIL: your_email@company.com
+  ZENDESK_TOKEN: ********************
 
 Calling init_tool()...
-✓ Tool initialized: <tool.ZenDeskTool object>
+✓ Tool initialized: <tool.zendeskTool object>
 ...
 ✅ Success:
    Ticket created successfully: ID #12345
@@ -245,7 +245,7 @@ See `requirements.txt` for the complete list.
 
 ### Common Issues
 
-**Issue**: "Missing required environment variable: ZenDesk_URL"
+**Issue**: "Missing required environment variable: ZENDESK_URL"
 - **Solution**: Ensure your `.env` file exists and contains all required variables
 
 **Issue**: "Error creating ticket: 401 - Unauthorized"
@@ -256,20 +256,19 @@ See `requirements.txt` for the complete list.
 
 **Issue**: URL formatting errors
 - **Solution**: The tool accepts URLs in multiple formats:
-  - `https://subdomain.ZenDesk.com`
-  - `subdomain.ZenDesk.com`
+  - `https://subdomain.zendesk.com`
+  - `subdomain.zendesk.com`
   - `subdomain`
 
 ## 🏗️ Project Structure
 
 ```
-├── tool.py                 # Main tool implementation
-├── tool_config.yaml        # Tool configuration for GenAI Builder
-├── requirements.txt        # Python dependencies
-├── dotenv-sample          # Sample environment variables file
-├── test_init_tool.py      # Comprehensive test script
-├── list_modules.py        # Module listing utility
-└── README.md              # This file
+├── tool.py              # Main tool implementation
+├── tool_config.yaml     # Tool configuration for GenAI Builder
+├── requirements.txt     # Python dependencies
+├── dotenv-sample        # Sample environment variables file
+├── test_tool.py         # Comprehensive test script
+└── README.md            # This file
 ```
 
 
@@ -279,16 +278,6 @@ EnterpriseDB Corporation
 
 ## 🔗 Related Resources
 
-- [ZenDesk API Documentation](https://developer.ZenDesk.com/api-reference/)
+- [ZenDesk API Documentation](https://developer.zendesk.com/api-reference/)
 - [EDB Postgres AI AI Factory GenAI Builder Tools](https://www.enterprisedb.com/docs/edb-postgres-ai/latest/ai-factory/gen-ai/tools/)
 - [Griptape Documentation](https://docs.griptape.ai/)
-
-## 📞 Support
-
-For issues or questions:
-- Create an issue in this repository
-- Contact the EDB Customer Experience team
-
----
-
-**Note**: This tool is designed for use with EnterpriseDB's ZenDesk instance but can be adapted for any ZenDesk account.
