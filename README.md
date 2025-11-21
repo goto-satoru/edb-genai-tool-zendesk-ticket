@@ -1,4 +1,4 @@
-# sample ZenDesk Tool
+# EDB PGAI GenAI Builder sample Tool for ZenDesk ticketing
 
 A Griptape-based tool for creating and managing ZenDesk customer support tickets programmatically. This tool provides a simple Python interface to interact with the ZenDesk API, enabling automated ticket creation through the Griptape framework.
 
@@ -21,6 +21,7 @@ A Griptape-based tool for creating and managing ZenDesk customer support tickets
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/EnterpriseDB/cx-tam-genai-tool-zendesk-ticket.git tool_zendesk
+   cd tool_zendesk
    ```
 
 2. **Create a Python virtual environment**:
@@ -95,9 +96,9 @@ Navigate to "POST /activities/new_ticket", click "Try it out", then edit value(p
 
 ```
 {
-  "subject": "test1",
-  "description": "description",
-  "requester_name": "customer",
+  "subject": "GenAI Builder Tool test",
+  "description": "GenAI Builder Tool test",
+  "requester_name": "a customer",
   "requester_email": "test@gmail.com"
 }
 ```
