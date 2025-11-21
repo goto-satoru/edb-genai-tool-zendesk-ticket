@@ -20,7 +20,7 @@ A Griptape-based tool for creating and managing ZenDesk customer support tickets
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/EnterpriseDB/cx-tam-genai-tool-zendesk-ticket.git tool_zendesk
+   git clone https://github.com/goto-satoru/edb-genai-tool-zendesk-ticket.git tool_zendesk
    cd tool_zendesk
    ```
 
@@ -199,11 +199,7 @@ In the Test tab, make a POST call to `/activities/new_ticket` with the following
 
 ## 🔒 Security Best Practices
 
-1. **Never commit your `.env` file** to version control
-2. **Use strong API tokens** and rotate them periodically
-3. **Limit API token permissions** to only what's necessary
-4. **Store credentials securely** in production environments (e.g., AWS Secrets Manager, Azure Key Vault)
-5. **Exclude sensitive files** from deployment archives
+DO NOT include .env file to Tools zip file
 
 ## 🧪 Testing
 
@@ -245,9 +241,6 @@ See `requirements.txt` for the complete list.
 
 ### Common Issues
 
-**Issue**: "Missing required environment variable: ZENDESK_URL"
-- **Solution**: Ensure your `.env` file exists and contains all required variables
-
 **Issue**: "Error creating ticket: 401 - Unauthorized"
 - **Solution**: Verify your API token is correct and has not expired
 
@@ -256,9 +249,9 @@ See `requirements.txt` for the complete list.
 
 **Issue**: URL formatting errors
 - **Solution**: The tool accepts URLs in multiple formats:
-  - `https://subdomain.zendesk.com`
-  - `subdomain.zendesk.com`
-  - `subdomain`
+  - `https://your_subdomain.zendesk.com`
+  - `your_subdomain.zendesk.com`
+  - `your_subdomain`
 
 ## 🏗️ Project Structure
 
@@ -271,6 +264,16 @@ See `requirements.txt` for the complete list.
 └── README.md            # This file
 ```
 
+
+## ⚠️ Disclaimer
+
+This tool is provided as **sample code for demonstration and educational purposes only**. It is not an official EnterpriseDB product and is provided "as-is" without any warranties or guarantees.
+
+**Important Notes**:
+- Use this tool at your own risk
+- Test thoroughly in a development environment before using in production
+- The authors and EnterpriseDB are not responsible for any issues, data loss, or damages that may occur from using this tool
+- Always follow your organization's security and compliance policies when handling API credentials
 
 ## 👥 Authors
 
